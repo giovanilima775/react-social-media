@@ -1,14 +1,23 @@
-import React from 'react';
+import { Button, Logo, NavBar, NavBarLinks } from './components';
 
 function App() {
+  const navLinks = [
+    { label: 'Home', href: '/' },
+    { label: 'Explore', href: '/' },
+    { label: 'Login', href: '/' },
+  ];
+
   return (
-    <div className="">
-      <h1 className="text-3xl bg-brandPrimary/300 w-auto font-display">
-        Hello World
-      </h1>
-      <h1 className="text-3xl bg-brandPrimary/300 w-auto font-body">
-        Hello World
-      </h1>
+    <div className="App p-10">
+      <NavBar>
+        <Logo />
+        <div className="flex items-center justify-center gap-4">
+          <NavBarLinks items={navLinks} />
+          <Button>
+            <span className="">Create new account</span>
+          </Button>
+        </div>
+      </NavBar>
     </div>
   );
 }

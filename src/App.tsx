@@ -2,7 +2,14 @@ import React from 'react';
 
 function App() {
   return (
-    <div className="p-6 max-w-sm mx-auto bg-white rounded-xl shadow-lg flex items-center space-x-4"></div>
+    <div className="">
+      <h1 className="text-3xl bg-brandPrimary/300 w-auto font-display">
+        Hello World
+      </h1>
+      <h1 className="text-3xl bg-brandPrimary/300 w-auto font-body">
+        Hello World
+      </h1>
+    </div>
   );
 }
 

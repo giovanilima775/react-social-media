@@ -1,3 +1,9 @@
 export function Logo() {
-  return <img src="https://www.w3.org/Icons/w3c_home" alt="Social Media " />;
+  return (
+    <img
+      src="/img/logo192.png"
+      className="object-cover h-16"
+      alt="Social Media"
+    />
+  );
 }

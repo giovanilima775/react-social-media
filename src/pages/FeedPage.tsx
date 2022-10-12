@@ -1,3 +1,4 @@
+import { Link, useNavigate } from 'react-router-dom';
 import {
   Button,
   FeedCardList,
@@ -9,6 +10,7 @@ import {
 } from 'components';
 
 export function FeedPage() {
+  const navigate = useNavigate();
   const navLinks = [
     { label: 'Home', href: '/' },
     { label: 'Explore', href: '/explore' },
@@ -17,13 +19,17 @@ export function FeedPage() {
   return (
     <>
       <NavBar>
-        <Logo />
+        <Link to="/">
+          <Logo />
+        </Link>
         <div className="flex items-center justify-center gap-4">
           <NavBarLinks items={navLinks} />
           <UserNameSmall
             userName="User Name 2"
             src="/img/pexels-kelvin-valerio-617278.jpg"
-            onClick={() => {}}
+            onClick={() => {
+              navigate('/profile/username');
+            }}
           />
           <Button>
             <span className="">Create new Post</span>
